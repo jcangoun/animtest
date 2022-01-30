@@ -1,0 +1,375 @@
+
+body {
+    margin: 0;
+    font-family: 'Roboto';
+ 
+  }
+
+header {
+
+}
+
+nav {
+    display: flex;
+    flex: 100%;
+    align-items: center;
+
+}
+
+.fleche {
+    flex: 10%;
+    padding: 0 25px;
+    /* margin: 25px; */
+    font-size: 20px;
+}
+
+.logo {
+    display: flex;
+    
+    flex: 65%;
+    font-size: 30px;
+    padding: 20px 0;
+    padding: 20px 0 20px 50px;
+    
+}
+.shrikhand {
+    font-family: 'Shrikhand';
+}
+.super-gras {
+    font-weight: 600;
+}
+main {
+    flex-direction: column;
+}
+.nom-menu
+
+
+.photo-affiche {
+    display: flex;
+    flex: 100%;
+    height: 275px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+
+}
+ 
+
+
+.photo-affiche img {
+    
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    /* padding: 10px; */
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    margin-top: -65px;
+    padding: 0 5px;
+    border-radius: 40px 40px 0 0;
+}
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 10px;
+}
+
+.nom__presentation {
+
+}
+
+.nom__titre {
+
+    font-size: 28px;
+}
+
+.icone-coeur {
+    display: flex;
+    margin: 10px 0;
+    font-size: 23px;
+
+}
+
+.active {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.active:hover {
+     font-weight: 600;
+     font-size: 30px;
+     color: #ca72e7;
+}
+
+.active:active {
+    content: " \f004";
+    color: #9356DC;
+}
+
+.entree {
+
+}
+
+.entree__titre {
+    
+    border-bottom: 3px solid#99E2D0;
+    margin: 10px;
+    width: 40px;
+}
+
+.entree__groupe {
+
+}
+
+/* entree__composition à la fin va prendre le nom en bas de entree__choix et inversement */
+.entree__composition {
+    display: flex;
+    flex-grow: 4;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px;
+    background-color: white;
+    /* padding: 10px; */
+    border-radius: 15px;
+    cursor: grab;
+   
+ 
+}
+.entree__choix {
+     margin: 5px;
+   /* background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px; */
+    flex: 75%;
+    
+}
+
+.choix__assiette {
+    margin: 5px;
+    font-size: 18px;
+}
+.gras {
+    font-weight: 500;
+}
+
+.choix__accompagnement {
+    margin: 5px;
+    font-size: 15px;
+}
+.prix {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 20px 10px 0;
+    transition: all 5s;
+}
+
+.ok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    background-color: #99E2D0;
+    border-radius: 0 10px 10px 0;
+    font-size: 20px;
+    overflow: hidden;
+
+    transform: translateX(10%), rotateX(-30deg);
+
+    transition: all 1000ms cubic-bezier(0.63,-0.29, 0.46, 1.32);
+}
+
+.ok-icone {
+    transform: rotateZ(0deg);
+    transition: all 1000ms;
+}
+
+
+    /* On dirait que si dessous les modifications ne passent pas a part transition-duration*/
+
+.entree__groupe:hover  .entree__composition {
+    animation-name: appear;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes appear {
+
+    0% {
+        transform: all;
+    }
+
+    1% {
+        transform: translateY(300%);
+    }
+    100% {
+        transform: translateY(0%); ;
+    }
+}
+
+
+.entree__composition:hover > .ok{  
+    transition: all 2s ease-in-out;
+     transform: rotateZ(85deg), translateX(100%) 10000ms;
+    background-color: #99E2D0 1000ms;
+    width: 60px;
+
+    animation-name: ok;
+    animation-duration: 1000ms;
+}
+.ok:hover .ok-icone {
+    transform: rotateZ(180deg);
+}
+
+/* @keyframes ok{
+    
+} */
+
+
+.plat {
+
+}
+
+.plat__titre {
+    border-bottom: 3px solid#99E2D0;
+    margin: 10px;
+    width: 40px;
+}
+
+.plat__groupe {
+
+}
+
+.plat__choix {
+    margin: 10px;
+    background-color: white;
+    /* padding: 10px; */
+    margin: 10px;
+    border-radius: 20px;
+    flex: 75%;
+}
+.plat__assiette {
+    margin: 5px;
+    font-size: 18px;
+}
+.plat__accompagnement {
+    margin: 5px;
+    font-size: 15px;
+}
+
+.dessert {
+
+}
+
+.dessert__titre {
+    border-bottom: 3px solid#99E2D0;
+    margin: 10px;
+    width: 40px;
+}
+
+.dessert__groupe {
+
+}
+
+.dessert__choix {
+    margin: 10px;
+    background-color: white;
+    /* padding: 10px; */
+    margin: 10px;
+    border-radius: 20px;
+    flex: 75%;
+}
+.dessert__assiette {
+    margin: 5px;
+}
+.dessert__accompagnement {
+    margin: 5px;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+}
+.bouton-commander {
+    background: linear-gradient(0deg, #9356DC, transparent);
+    background-color: #FF79DA;
+    border-radius: 30px;
+    color: white;
+    margin: 35px 20px;
+    padding: 20px 50px;
+    border: none;
+    font-size: 17px;
+}
+
+
+
+footer {
+   
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #393939;
+    color: white;
+    padding: 10px 20px; 
+    margin: 0;
+}
+
+.footer__logo {
+    /* font-family: 'Shrikhand', 'cursive', 'Cambria'; */
+    margin: 20px 5px; 
+    font-size: 18px;
+    list-style: none;
+}
+
+.footer__proposition {
+    display: flex;
+    flex-direction: row;
+}
+.footer__icone {
+    margin: 5px;
+}
+/* .footer__couverts {
+    margin: 5px;
+} */
+
+.footer__phrase-proposition {
+    margin: 5px;
+}
+
+.footer__bepartner {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__item {
+    margin: 5px;
+}
+
+.footer__legal {
+    display: flex;
+    margin: 5px;
+}
+
+.footer__phraselegale {
+    
+}
+
+.footer__contact {
+    display: flex;
+    margin: 5px 5px 25px 5px;
+    
+}
+
+.footer__phrasecontakt {
+    color: white;
+}
+
+
+ /*   Ici se termine la partie de breakpoints mobile  et en bas on passe au desktop */
