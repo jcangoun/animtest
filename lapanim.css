@@ -183,18 +183,23 @@ main {
     transition: all 1000ms cubic-bezier(0.63,-0.29, 0.46, 1.32);
 }
 
+
+
+
+
 .ok-icone {
     transform: rotateZ(0deg);
     transition: all 1000ms;
 }
 
 
-    /* On dirait que si dessous les modifications ne passent pas a part transition-duration*/
+    /*Fin des entreees et dbut sde ses :hover entrees*/
 
 .entree__groupe:hover  .entree__composition {
     animation-name: appear;
     animation-duration: 2000ms;
     animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
     animation-fill-mode: both;
 }
 
@@ -202,35 +207,75 @@ main {
 
     0% {
         transform: all;
+        transform: translateY(30%);
+        opacity:0;
     }
 
-    1% {
-        transform: translateY(300%);
-    }
+    
     100% {
-        transform: translateY(0%); ;
+        transform: translateY(0%); 
+        opacity: 0.9;
     }
 }
 
 
 .entree__composition:hover > .ok{  
     transition: all 2s ease-in-out;
+    animation-delay: 5s;
      transform: rotateZ(85deg), translateX(100%) 10000ms;
     background-color: #99E2D0 1000ms;
     width: 60px;
 
-    animation-name: ok;
-    animation-duration: 1000ms;
+  
 }
+/*  hover d'anim tour bn ok celui revient a sa place de depart et j arrive pas encore en keyframe
+
 .ok:hover .ok-icone {
     transform: rotateZ(180deg);
+
+}*/
+
+.entree__composition:hover .ok-icone {
+    animation: ok-turn 1700ms ease-in-out;
+    animation-fill-mode: both;
+    animation-direction: alternate-reverse;
+    animation-delay: 0.5s
 }
 
-/* @keyframes ok{
-    
-} */
+@keyframes ok-turn {
 
 
+    0% {
+        transform: all;
+        
+
+    }
+    1% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(180deg);
+        
+    }
+
+}
+
+/*   
+
+ok version keyframes en bas on pourra ainsi choisir en securité
+
+
+*/
+
+
+
+
+
+/* Fin :hover des entrees*/
+
+
+/* Debut plat*/
 .plat {
 
 }
@@ -262,6 +307,49 @@ main {
     font-size: 15px;
 }
 
+
+/* Fin plats et ses debuts :hover plats*/
+
+.plat__groupe:hover  .entree__composition {
+    animation-name: appear;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes appear {
+
+    0% {
+        transform: all;
+        transform: translateY(30%);
+        opacity:0;
+    }
+
+    
+    100% {
+        transform: translateY(0%); 
+        opacity: 0.9;
+    }
+}
+
+
+.entree__composition:hover > .ok{  
+    transition: all 2s ease-in-out;
+    animation-delay: 5s;
+     transform: rotateZ(85deg), translateX(100%) 10000ms;
+    background-color: #99E2D0 1000ms;
+    width: 60px;
+
+  
+}
+
+/* Fin hover plats */
+
+
+
+/* Debut dessert */
+
 .dessert {
 
 }
@@ -290,6 +378,51 @@ main {
 .dessert__accompagnement {
     margin: 5px;
 }
+
+/* Fin section dessert ci dessous ses hovers*/
+
+
+
+/* Debut :hover dessert*/
+
+.dessert__groupe:hover  .entree__composition {
+    animation-name: appear;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes appear {
+
+    0% {
+        transform: all;
+        transform: translateY(30%);
+        opacity:0;
+    }
+
+    
+    100% {
+        transform: translateY(0%); 
+        opacity: 0.9;
+    }
+}
+
+
+.entree__composition:hover > .ok{  
+    transition: all 2s ease-in-out;
+    animation-delay: 5s;
+     transform: rotateZ(85deg), translateX(100%) 10000ms;
+    background-color: #99E2D0 1000ms;
+    width: 60px;
+
+  
+}
+
+
+/* fin :hover dessert*/
+
+
 
 .bouton {
     display: flex;
